@@ -1,6 +1,6 @@
 {{- if and .Values.anchoreEnterpriseGlobal.enabled .Values.anchoreEnterpriseFeeds.enabled -}}
 {{- $component := "enterprise-feeds" -}}
-apiVersion: v1
+apiVersion: apps/v1
 kind: ConfigMap
 metadata:
   name: {{ template "anchore-engine.enterprise-feeds.fullname" . }}-env
